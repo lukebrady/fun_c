@@ -61,4 +61,9 @@ int main() {
     printf("\n");
     printf("Linked list backward print:\n");
     printListBack(node3);
+
+    // Free the node's memory.
+    free(node1);
+    free(node2);
+    free(node3);
 }
