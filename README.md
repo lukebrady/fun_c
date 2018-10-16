@@ -1,2 +1,2 @@
-# c-data-structures
-A general repository for data structures written in C.
+# FUN_C
+A general repository for programs written in C.
