@@ -3,7 +3,7 @@
 
 int stack_pos = 0;
 
-int post(int *stack, int value) {
+int push(int *stack, int value) {
     if(stack_pos < 100) {
         stack[stack_pos] = value;
         stack_pos++;
@@ -26,8 +26,8 @@ int main() {
     int stack_len;
 
     stack = (int *)malloc(100);
-    post(stack, 3);
-    post(stack, 5);
+    push(stack, 3);
+    push(stack, 5);
     pop(stack);
     pop(stack);
     pop(stack);
