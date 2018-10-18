@@ -7,10 +7,17 @@ struct Node {
     char *value;
 };
 
+struct DoublyLL {
+    struct Node *root;
+};
+
 // Function to add a char * to a given Node.
 void addValue(struct Node *node, char *value) {
     // Add the char value to the node.
     node->value = value;
+}
+
+void addNode(struct Node *node, char *value) {
 }
 
 // Print list from left to right.
