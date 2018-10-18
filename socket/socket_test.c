@@ -6,7 +6,8 @@
 #include <unistd.h>
 #include <sys/types.h>
 #include <netdb.h>
-
+#include <pthread.h>
+/*
 // Create and return a socket.
 int make_socket(uint16_t port) 
 {
@@ -28,8 +29,9 @@ int make_socket(uint16_t port)
     }
     return sock;
 }
-
-int main() {
+*/
+/*
+int accept_connection() {
     uint16_t port = 8099;
     int sock = make_socket(port);
     socklen_t size;
@@ -54,4 +56,17 @@ int main() {
         write(sock, msg, strlen(msg) + 1);
         //close(new);
     }
+}
+*/
+
+void *print(void *text) {
+    printf("%s\n", (char *) text);
+    return 0;
+}
+
+int main() {
+    pthread_t th1;
+    // Create a new pthread.
+    pthread_create(&th1, NULL, print, "Hello how are you 1?");
+    pthread_join(th1, NULL);
 }
