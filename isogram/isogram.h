@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
 #include <string.h>
 
 static char *map[100];
@@ -25,15 +24,5 @@ int is_iso(char *text) {
             return 1;
         printf("%c\n", text[i]);
     }
-    return 0;
-}
-
-int main() {
-    int result = is_iso("hssh");
-    if (result != 0) {
-        printf("The text is not an isogram.\n");
-        return 1;
-    }
-    printf("The phrase is an isogram.\n");
     return 0;
 }
